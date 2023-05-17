@@ -6,6 +6,9 @@
   "author": "Walker Alfaro Trelles",
   "license": "MIT",
   "type": "module",
+  "scripts": {
+    "start": "node app.js"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "cron": "^2.3.0",
