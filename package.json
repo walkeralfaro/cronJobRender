@@ -1,0 +1,18 @@
+{
+  "name": "prueba_cronjobs_ender",
+  "version": "1.0.0",
+  "description": "Prueba de la funcionalidad de CronJob en Render server",
+  "main": "app.js",
+  "author": "Walker Alfaro Trelles",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "cron": "^2.3.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
