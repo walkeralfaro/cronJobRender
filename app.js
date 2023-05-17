@@ -1,6 +1,6 @@
 import express from 'express'
 import cron from 'cron'
-import http from 'http'
+import https from 'https'
 import cors from 'cors'
 
 import * as dotenv from 'dotenv';
@@ -16,13 +16,13 @@ app.get(process.env.PATH_AWAKE, (req, res) => {
 })
 
 function performGetRequest() {
-  const options = {
-    host: process.env.HOST,
-    port: port,
-    path: process.env.PATH_AWAKE
-  };
 
-  http.get(options, (response) => {
+  const options = {
+    host: process.env.HOST,  
+    path: process.env.PATH_AWAKE,            
+  };
+  
+  https.get(options, (response) => {
     let data = '';
 
     response.on('data', (chunk) => {
