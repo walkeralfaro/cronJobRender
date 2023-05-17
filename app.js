@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000;
 
 app.use(cors())
 
-app.get(process.env.PATH_AWAKE, (res) => {
+app.get(process.env.PATH_AWAKE, (req, res) => {
   res.send('still awake')
 })
 
