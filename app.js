@@ -37,7 +37,7 @@ function performGetRequest() {
   });
 }
 
-const cronJob = new cron.CronJob('*/5 * * * *', performGetRequest);
+const cronJob = new cron.CronJob('*/5 * * * * *', performGetRequest);
 cronJob.start();
 
 app.listen( port, () => {
