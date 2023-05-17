@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000;
 
 app.use(cors())
 
-app.get('/wakeup', (res) => {
+app.get(process.env.PATH_AWAKE, (res) => {
   res.send('still awake')
 })
 
@@ -19,7 +19,7 @@ function performGetRequest() {
   const options = {
     host: process.env.HOST,
     port: port,
-    path: '/wakeup'
+    path: process.env.PATH_AWAKE
   };
 
   http.get(options, (response) => {
@@ -37,7 +37,7 @@ function performGetRequest() {
   });
 }
 
-const cronJob = new cron.CronJob('*/10 * * * *', performGetRequest);
+const cronJob = new cron.CronJob('*/1 * * * *', performGetRequest);
 cronJob.start();
 
 app.listen( port, () => {
